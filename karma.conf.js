@@ -15,7 +15,7 @@ module.exports = function (config) {
             "specs/environment/init.js",
 
             // Html fixtures
-            "fixtures/**/*.html",
+            "specs/fixtures/**/*.html",
 
             // All application and library source files
             {pattern: "src/**/*.js", included: false, served: true},
@@ -29,7 +29,7 @@ module.exports = function (config) {
 
         // Preprocess certain files, like HTML ;)
         preprocessors: {
-            'fixtures/**/*.html': ["html2js"]
+            'specs/fixtures/**/*.html': ["html2js"]
         },
 
         // use dots reporter, as travis terminal does not support escaping sequences
