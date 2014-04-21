@@ -1,0 +1,12 @@
+{
+  "name": "kagency-ui",
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular-ui-bootstrap": "~0.10.0",
+    "angular-ui": "~0.4.0",
+    "angular": "~1.2.16"
+  }
+}
