@@ -39,7 +39,7 @@ module.exports = function (config) {
 
         junitReporter: {
             // will be resolved to basePath (in the same way as files/exclude patterns)
-            outputFile: 'logs/karma/test-results.xml'
+            outputFile: 'build/logs/karma.xml'
         },
 
         // web server port
