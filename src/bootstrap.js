@@ -1,12 +1,16 @@
 define([
     'require',
     'angular',
+    'pouchdb',
+    'angular-route',
     'app',
-    'routes'
-], function (require, ng) {
+    'routes',
+    'services'
+], function (require, angular, PouchDB) {
     'use strict';
 
     require(['domReady!'], function (document) {
-        ng.bootstrap(document, ['app']);
+        window.PouchDB = PouchDB;
+        angular.bootstrap(document, ['app']);
     });
 });

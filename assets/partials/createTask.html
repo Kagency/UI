@@ -1,0 +1,8 @@
+<form role="form">
+    <input ng-model="task.type" type="hidden" name="taskType" value="Kagency\Module\RSS\Task\NewFeed" />
+    <div class="form-group">
+        <label for="taskValue">Value</label>
+        <input ng-model="task.value" type="text" class="form-control" id="taskValue" placeholder="http://">
+    </div>
+    <button type="submit" ng-click="createTask(task.type, task.value)" class="btn btn-default">Create Task</button>
+</form>

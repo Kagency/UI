@@ -1,10 +1,12 @@
 define([
     'angular',
-    'angular-route'
-], function (ng) {
+    'pouchdb',
+    'angular-pouchdb'
+], function (angular, PouchDB) {
     'use strict';
 
-    return ng.module('app', [
-        'ngRoute'
+    return angular.module('app', [
+        'ngRoute',
+        'pouchdb'
     ]);
 });

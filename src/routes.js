@@ -3,16 +3,23 @@ define([
 ], function (app) {
     'use strict';
 
-    return app.config(['$routeProvider', function ($routeProvider) {
+    return app.config(function ($routeProvider) {
         $routeProvider.when('/test', {
-            templateUrl: 'partials/test.html',
-            controller: function ($scope) {
-                $scope.version = '0.1.0';
+            templateUrl: 'partials/createTask.html',
+            controller: function ($scope, kagentService) {
+                $scope.task = {
+                    type: "Kagency\\Module\\RSS\\Task\\NewFeed",
+                    value: null
+                };
+
+                $scope.createTask = function() {
+                    kagentService.appendTask($scope.task);
+                };
             }
         });
 
         $routeProvider.otherwise({
             redirectTo: '/test'
         });
-    }]);
+    });
 });
