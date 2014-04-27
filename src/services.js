@@ -1,7 +1,8 @@
 define([
     './app',
+    './task',
     'pouchdb'
-], function (app, pouchdb) {
+], function (app, Task, pouchdb) {
     'use strict';
 
     app.factory('kagentStorage', function(pouchdb) {
@@ -14,8 +15,10 @@ define([
         };
 
         service.prototype.appendTask = function(task) {
-            // @TODO: Append task to PouchDB storage
-            console.log(task);
+            this.storage.post({
+                type: "task",
+                task: task,
+            });
         }
 
         return new service();
