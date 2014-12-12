@@ -1,6 +1,7 @@
 define([
     'require',
     'react',
+    'bootstrap',
     'pouchdb'
 ], function (require, React, PouchDB) {
     'use strict';
