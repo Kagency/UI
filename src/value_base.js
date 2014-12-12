@@ -6,6 +6,9 @@ define([
     ValueBase.prototype.set = function(property, value) {
         var newValue = JSON.parse(JSON.stringify(this))
         newValue[property] = value;
+        console.log(this.prototype);
+        newValue.protype = this.protype;
+        console.log(newValue.prototype);
         return newValue;
     }
 
