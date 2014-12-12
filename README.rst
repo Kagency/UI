@@ -19,6 +19,10 @@ Milestones
 
 * [ ] Apply local context sensitive sorting on events (location, time, …)
 
+* [ ] Make it possible to extend the actions, which can be sent
+
+* [ ] Make it possible to extend the displayed event types
+
 * [ ] Make it beautiful and easy to use
 
 Implementation
