@@ -8,7 +8,5 @@ define([
     require(['domReady!'], function (document) {
         window.PouchDB = PouchDB;
         window.React = React;
-        
-        alert("Hello world!");
     });
 });
