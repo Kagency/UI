@@ -11,6 +11,8 @@
     "bootstrap": "~3.2.0",
     "requirejs-domready": "~2.0.1",
     "react": "~0.12.1",
-    "pouchdb": "~3.2.0"
+    "pouchdb": "~3.2.0",
+    "jsx-requirejs-plugin": "~0.5.1",
+    "requirejs-text": "~2.0.12"
   }
 }

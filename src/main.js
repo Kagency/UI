@@ -2,7 +2,8 @@ define([
     'require',
     'react',
     'bootstrap',
-    'pouchdb'
+    'pouchdb',
+    'jsx!components/timer'
 ], function (require, React, PouchDB) {
     'use strict';
 
