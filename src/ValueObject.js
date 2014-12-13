@@ -34,5 +34,17 @@ define([
         return this[property];
     };
 
+    ValueObject.prototype.values = function() {
+        var cleanObject = {};
+
+        for (var property in this) {
+            if (this.hasOwnProperty(property)) {
+                cleanObject[property] = this[property];
+            }
+        }
+
+        return cleanObject;
+    };
+
     return ValueObject;
 });

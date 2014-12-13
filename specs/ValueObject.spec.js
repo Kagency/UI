@@ -4,6 +4,7 @@ define([
 
     var TestObject = function () {
         this.property = null;
+        this.secondProperty = null;
 
         ValueObject.apply(this, arguments);
     };
@@ -14,6 +15,15 @@ define([
             var valueObject = new TestObject();
             valueObject = valueObject.set("property", "value");
             expect(valueObject.get("property")).toEqual("value");
+        });
+
+        it("returns set second property", function() {
+            var valueObject = new TestObject();
+            valueObject = valueObject.set("property", "value");
+            valueObject = valueObject.set("secondProperty", "value");
+
+            expect(valueObject.get("property")).toEqual("value");
+            expect(valueObject.get("secondProperty")).toEqual("value");
         });
 
         it("fails on get on unknown property", function() {
@@ -66,6 +76,14 @@ define([
                 // actually be executed:
                 valueObject.get("property");
             }).toThrow(new Error("Property unknown is undefined."));
+        });
+
+        it("extracts a clean value object", function() {
+            var valueObject = new TestObject({
+                property: "value"
+            });
+
+            expect(valueObject.values()).toEqual({property: "value", secondProperty: null});
         });
     });
 });
