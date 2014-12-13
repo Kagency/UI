@@ -23,5 +23,13 @@ define([
             expect(original.get("property")).toEqual("value");
             expect(copy.get("property")).toEqual("new value");
         });
+
+        it("init sets all passed properties", function() {
+            var valueObject = new ValueObject({
+                    property: "value"
+                });
+
+            expect(valueObject.get("property")).toEqual("value");
+        });
     });
 });

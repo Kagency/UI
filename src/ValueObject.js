@@ -2,7 +2,16 @@ define([
 ], function () {
     'use strict';
 
-    var ValueObject = function() {};
+    var ValueObject = function(properties) {
+        var properties = properties || {};
+
+        for (var property in properties) {
+            if (properties.hasOwnProperty(property)) {
+                this[property] = properties[property];
+            }
+        }
+    };
+
     ValueObject.prototype.set = function(property, value) {
         var newValue = Object.create(this);
         newValue[property] = value;
