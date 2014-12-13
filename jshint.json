@@ -60,6 +60,8 @@
 
     "globals": {
         "require": true,
-        "define": true
+        "define": true,
+        "describe": true,
+        "it": true
     }
 }
