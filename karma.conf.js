@@ -18,10 +18,12 @@ module.exports = function (config) {
             "specs/fixtures/**/*.html",
 
             // All application and library source files
+            {pattern: "src/*.js", included: false, served: true},
             {pattern: "src/**/*.js", included: false, served: true},
+            {pattern: "bower_components/**/*.js", included: false, served: true},
             
             // All Test specs
-            {pattern: "specs/**/*.spec.js", included: false, served: true}
+            {pattern: "specs/**/*.spec.js", included: false, served: true},
         ],
 
         // list of files to exclude

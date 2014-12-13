@@ -8,10 +8,12 @@ require.config({
     "baseUrl": "/base/src",
 
     "paths": {
-        /* Further test related path definitions */
+        "es5-shim": "../bower_components/es5-shim/es5-shim"
     },
 
     "shims": {
         /* Test related shim definitions */
-    }
+    },
+
+    "deps": ["es5-shim"]
 });

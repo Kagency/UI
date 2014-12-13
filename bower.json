@@ -13,6 +13,7 @@
     "react": "~0.12.1",
     "pouchdb": "~3.2.0",
     "jsx-requirejs-plugin": "~0.5.1",
-    "requirejs-text": "~2.0.12"
+    "requirejs-text": "~2.0.12",
+    "es5-shim": "~4.0.5"
   }
 }
