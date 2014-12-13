@@ -3,18 +3,16 @@ define([
     'use strict';
 
     var ValueObject = function(properties) {
-        var properties = properties || {};
+        properties = properties || {};
 
         for (var property in properties) {
-            if (!properties.hasOwnProperty(property)) {
-                continue;
-            }
+            if (properties.hasOwnProperty(property)) {
+                if (this[property] === undefined) {
+                    throw "Property " + property + " is undefined.";
+                }
 
-            if (this[property] === undefined) {
-                throw "Property " + property + " is undefined.";
+                this[property] = properties[property];
             }
-
-            this[property] = properties[property];
         }
     };
 
