@@ -1,6 +1,7 @@
 define([
     'react',
-    'jquery'
+    'jquery',
+    'pouchdb'
 ], function (React, PouchDB, jquery) {
     var Feed = React.createClass({
         getInitialState: function() {
@@ -14,7 +15,7 @@ define([
         onSubmit: function (e) {
             e.preventDefault();
 
-            // Store event in PouchDB
+            // @TODO: Store event in PouchDB
             console.log("Store " + this.state.feedUrl);
             this.setState({feedUrl: ""});
         },
