@@ -19,15 +19,15 @@ define([
         it("fails on get on unknown property", function() {
             var valueObject = new TestObject();
             expect(function () {
-                valueObject.get("unknown");}
-            ).toThrow(new Error("Property unknown is undefined."));
+                valueObject.get("unknown");
+            }).toThrow(new Error("Property unknown is undefined."));
         });
 
         it("fails on set on unknown property", function() {
             var valueObject = new TestObject();
             expect(function () {
-                valueObject.set("unknown");}
-            ).toThrow(new Error("Property unknown is undefined."));
+                valueObject.set("unknown");
+            }).toThrow(new Error("Property unknown is undefined."));
         });
 
         it("does not change original value on changed property", function() {
@@ -62,6 +62,9 @@ define([
                 var valueObject = new TestObject({
                     unknown: "value"
                 });
+                // This line is just to make JSHint happy, should never
+                // actually be executed:
+                valueObject.get("property");
             }).toThrow(new Error("Property unknown is undefined."));
         });
     });
