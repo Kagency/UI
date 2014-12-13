@@ -4,9 +4,8 @@ define([
 
     var ValueObject = function() {};
     ValueObject.prototype.set = function(property, value) {
-        var newValue = JSON.parse(JSON.stringify(this));
+        var newValue = Object.create(this);
         newValue[property] = value;
-        newValue.protype = this.protype;
         return newValue;
     };
 

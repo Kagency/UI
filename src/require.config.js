@@ -9,6 +9,7 @@ require.config({
         "JSXTransformer": "../bower_components/react/JSXTransformer",
         "jsx": ".././bower_components/jsx-requirejs-plugin/js/jsx",
 
+        "underscore": "../bower_components/underscore/underscore",
         "jquery": "../bower_components/jquery/dist/jquery",
         "bootstrap": "../bower_components/bootstrap/dist/js/bootstrap",
 
