@@ -2,17 +2,15 @@ define([
 ], function () {
     'use strict';
 
-    var ValueBase = function() {};
-    ValueBase.prototype.set = function(property, value) {
+    var ValueObject = function() {};
+    ValueObject.prototype.set = function(property, value) {
         var newValue = JSON.parse(JSON.stringify(this))
         newValue[property] = value;
-        console.log(this.prototype);
         newValue.protype = this.protype;
-        console.log(newValue.prototype);
         return newValue;
     }
 
-    ValueBase.prototype.get = function(property) {
+    ValueObject.prototype.get = function(property) {
         if (this[property] === undefined) {
             throw "Property " + property + " is undefined.";
         }
@@ -20,5 +18,5 @@ define([
         return this[property];
     }
 
-    return ValueBase;
+    return ValueObject;
 });
