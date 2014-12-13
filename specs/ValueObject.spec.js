@@ -13,12 +13,15 @@ define([
                 copy = original.set("property", "value");
 
             expect(original.property).toBeUndefined();
+            expect(copy.get("property")).toEqual("value");
         });
 
         it("does not change original value on changed property", function() {
             var original = new ValueObject(),
-                original = original.set("property", "value"),
-                copy = original.set("property", "new value");
+                copy;
+
+            original = original.set("property", "value");
+            copy = original.set("property", "new value");
 
             expect(original.get("property")).toEqual("value");
             expect(copy.get("property")).toEqual("new value");

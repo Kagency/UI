@@ -62,6 +62,7 @@
         "require": true,
         "define": true,
         "describe": true,
-        "it": true
+        "it": true,
+        "expect": true
     }
 }
