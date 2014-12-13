@@ -1,23 +1,28 @@
 define([
     'react',
     'jquery',
-    'pouchdb'
-], function (React, PouchDB, jquery) {
+    'Storage',
+    'Task'
+], function (React, jQuery, Storage, Task) {
     var Feed = React.createClass({
         getInitialState: function() {
-            return {feedUrl: ''};
+            return new Task();
         },
 
         onChange: function (e) {
-            this.setState({feedUrl: e.target.value});
+            this.setState(this.state.value = {feedUrl: e.target.value});
         },
 
         onSubmit: function (e) {
             e.preventDefault();
 
-            // @TODO: Store event in PouchDB
-            console.log("Store " + this.state.feedUrl);
-            this.setState({feedUrl: ""});
+            var task = new Task({
+                "type": "feed",
+                "value": this.state
+            });
+
+            Storage.database.post(task.values());
+            this.setState(this.state.value = {feedUrl: ""});
         },
 
         render: function() {
