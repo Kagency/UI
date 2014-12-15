@@ -1,0 +1,36 @@
+{
+    "name":         "kagency/UI",
+    "description":  "UI for Kangecy",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:Kagency/couchdb-endpoint.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:Kagency/module-rss.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:Kagency/Kagent.git"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Kagency": "src/"
+        }
+    },
+    "require": {
+        "kagency/kagent": "@dev",
+        "kagency/module-rss": "@dev",
+        "kagency/couchdb-endpoint": "@dev"
+    },
+    "require-dev": {
+        "behat/behat": "@stable",
+        "pdepend/pdepend": "@stable",
+        "phpmd/phpmd": "@stable",
+        "phpunit/phpunit": "@stable",
+        "sebastian/phpcpd": "@stable",
+        "squizlabs/php_codesniffer": "@stable"
+    }
+}
