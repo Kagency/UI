@@ -1,6 +1,6 @@
-=======
-Kagency
-=======
+==========
+Kagency UI
+==========
 
 .. image::  https://secure.travis-ci.org/Kagency/UI.png
    :alt:    Travis Status
