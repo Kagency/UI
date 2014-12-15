@@ -4,6 +4,8 @@ node_js:
     - "0.11"
     - "0.10"
 
+before_script: npm install -g bower
+
 install: ant -logger org.apache.tools.ant.NoBannerLogger initialize
 
 script: ant -logger org.apache.tools.ant.NoBannerLogger test
