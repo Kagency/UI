@@ -2,6 +2,11 @@
 Kagency
 =======
 
+.. image::  https://secure.travis-ci.org/Kagency/UI.png
+   :alt:    Travis Status
+   :target: https://secure.travis-ci.org/Kagency/UI
+   :align:  right
+
 Kagency is supposed to support you with information you need in the current
 context and means to automatically or semi-automatically act based on
 information.
