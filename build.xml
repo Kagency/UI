@@ -23,7 +23,7 @@
     <!--
          Custom project tasks
     -->
-    <target name="serve" depends="install">
+    <target name="serve" depends="initialize">
         <echo>Server starting on http://localhost:8080/</echo>
         <exec executable="php" failonerror="true" dir="${basedir}">
             <arg value="-S" />                                              
