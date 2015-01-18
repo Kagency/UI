@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_URI'] === '/') {
 }
 
 if (substr($_SERVER['REQUEST_URI'], 0, 5) === '/api/') {
-    include $baseDir . 'api/index.php';
+    include $baseDir . 'api.php';
     return;
 }
 
