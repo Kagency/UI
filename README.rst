@@ -13,6 +13,17 @@ information.
 
 This component implements a Angular based, offline-first, mobile-first UI.
 
+Start
+=====
+
+To start the server just execute:
+
+    ant serve
+
+It will install and link all required assets and start the server using PHPs
+internal webserver. This is not recommended for production, but should be
+sufficient for development.
+
 Milestones
 ==========
 
