@@ -21,6 +21,19 @@
     <import optional="true" file="${basedir}/ant/modules/composer.xml" />
 
     <!--
+         Custom project tasks
+    -->
+    <target name="serve" depends="install">
+        <exec executable="php" failonerror="true" dir="${basedir}">
+            <arg value="-S" />                                              
+            <arg value="localhost:8080" />                                              
+            <arg value="-t" />                                              
+            <arg value="www/" />                                              
+            <arg value="www/routing.php" />
+        </exec>
+    </target>
+
+    <!--
         Task group, which installs the build-commons, if they do not exist yet.
     -->
     <target name="-install:check">
