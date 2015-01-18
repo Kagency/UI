@@ -201,6 +201,12 @@ module.exports = function (grunt) {
             {
                 expand: true,
                 cwd: ".",
+                src: ["api"],
+                dest: "www/"
+            },
+            {
+                expand: true,
+                cwd: ".",
                 src: ["node_modules"],
                 dest: "www/"
             },
